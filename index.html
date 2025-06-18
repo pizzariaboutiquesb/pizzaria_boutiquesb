@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pizzaria BoutiqueSB</title>
     <style>
         body {
@@ -13,6 +13,7 @@
             background-size: cover;
             background-position: center;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
@@ -25,6 +26,10 @@
             border-radius: 15px;
             text-align: center;
             max-width: 90%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         h1 {
@@ -48,19 +53,71 @@
             text-decoration: none;
             border-radius: 8px;
             transition: 0.3s;
+            cursor: pointer;
         }
 
         .btn:hover {
             background-color: #d62828;
         }
+
+        .top-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: auto;
+            padding: 10px 15px;
+            font-size: 1em;
+            z-index: 1000;
+            background-color: #e63946;
+            border-radius: 8px;
+        }
+
+        .top-button:hover {
+            background-color: #d62828;
+        }
+
+        footer {
+            background-color: rgba(0,0,0,0.7);
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 1em;
+            position: fixed;
+            bottom: 0;
+            color: white;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .btn {
+                width: 200px;
+                font-size: 1.1em;
+            }
+            .top-button {
+                font-size: 0.9em;
+                padding: 8px 12px;
+            }
+        }
     </style>
 </head>
 <body>
+    <a href="https://goo.gl/maps/oEWVwFd1TSZ1pW6D6?g_st=aw" target="_blank" class="btn top-button" rel="noopener noreferrer">📍 Ver Localização</a>
+
     <div class="container">
         <h1>Pizzaria BoutiqueSB</h1>
         <p>A melhor pizzaria de São Sebastião e toda a região! Qualidade, sabor e atendimento que fazem a diferença.</p>
-        <a class="btn" href="https://wa.me/5561991871904?text=Olá,%20quero%20fazer%20um%20pedido!" target="_blank">📞 Fazer Pedido no WhatsApp</a>
-        <a class="btn" href="https://www.instagram.com/pizzaria_boutiquesb" target="_blank">📸 Ver Instagram</a>
+        <a class="btn" href="https://wa.me/5561991871904?text=Olá,%20quero%20fazer%20um%20pedido!" target="_blank" rel="noopener noreferrer">📞 Fazer Pedido no WhatsApp</a>
+        <a class="btn" href="https://www.instagram.com/pizzaria_boutiquesb" target="_blank" rel="noopener noreferrer">📸 Ver Instagram</a>
     </div>
+
+    <footer>
+        Endereço: São José, quadra 01, lote 02
+    </footer>
 </body>
 </html>
